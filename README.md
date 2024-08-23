@@ -33,6 +33,12 @@ Here are some ideas to get you started:
 
 <div align=center>
   
+  ### 🎵 Velog 🎵
+  🔗 <a href="https://velog.io/@sagwa00/posts">EG's Study Velog!</a>
+</div>
+
+<div align=center>
+  
   ### 💿 Project 💿
   🔗 <a href="https://laundryking-5a8d5.web.app/">LaundryKing Team project</a>
 </div>
