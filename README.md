@@ -43,5 +43,5 @@ Here are some ideas to get you started:
   🔗 <a href="https://laundryking-5a8d5.web.app/">LaundryKing Team project</a>
   <br>
   🔗 <a href="https://heroes-shop.web.app/">Heroes Shop project</a>
- 🔗 <a href="https://drive.google.com/file/d/1AAQsksyZjnZIrYNTnKxH2mBuRSTQSZ1u/view?usp=drive_link">Heroes Shop project PPT</a>
+ 🔗 <a href="https://drive.google.com/file/d/1AAQsksyZjnZIrYNTnKxH2mBuRSTQSZ1u/view?usp=sharing">Heroes Shop project PPT</a>
 </div>
