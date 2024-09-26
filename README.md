@@ -41,4 +41,5 @@ Here are some ideas to get you started:
   
   ### 💿 Project 💿
   🔗 <a href="https://laundryking-5a8d5.web.app/">LaundryKing Team project</a>
+  🔗 <a href="https://heroes-shop.web.app/">Heroes Shop project</a>
 </div>
