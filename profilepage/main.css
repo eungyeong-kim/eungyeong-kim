@@ -97,5 +97,6 @@ body{
     left: 50%; /* 화면의 가로 50% 지점으로 이동 */
     transform: translateX(-50%);
     position:fixed;
-    bottom: 5%
+    bottom: 5%;
+    font-size: 30px;
 }
