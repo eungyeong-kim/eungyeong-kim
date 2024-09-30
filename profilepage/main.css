@@ -98,5 +98,71 @@ body{
     transform: translateX(-50%);
     position:fixed;
     bottom: 5%;
-    font-size: 30px;
 }
+.borderBlue{
+    color:#ffff;
+    text-shadow: 
+    1px 1px 0px #0000ff, /* 오른쪽 아래 */
+    -1px -1px 0px #0000ff, /* 왼쪽 위 */
+    -1px 1px 0px #0000ff, /* 왼쪽 아래 */
+    1px -1px 0px #0000ff; /* 오른쪽 위 */
+}
+.colorBlue{
+    color:#0000ff
+}
+.secondPage .secondTitle  > p:first-of-type{
+    font-size: 128px;
+    line-height: 0.9;
+    position:relative;
+    margin-bottom: 50px;
+}
+.secondPage .secondTitle h2{
+    font-size: 60px;
+    color:#cfcfcf;
+    position:absolute;
+    left: 345px;
+}
+.secondPage h2 span:first-of-type{
+ color:#000
+}
+.secondTitle{
+    display: flex;
+    position:relative
+}
+.blueBox{
+    width: 243px;
+    height: 243px;
+    background-color: #0000ff;
+    border: 1px solid #0000ff;
+    position:relative;
+    margin-bottom: 230px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.whiteTitle{
+    font-size: 24px;
+    color:#fff
+}
+.whiteBox{
+    width: 243px;
+    height: 243px;
+    background-color: #fff;
+    border: 1px solid #000;
+    position:relative;
+    top: 105px;    
+    padding: 10px;
+    box-sizing: border-box;
+}
+.blueTitle{
+    font-size: 24px;
+    color:#000
+}
+.secondPage ul:first-of-type{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    line-height: 1.5;
+    font-size: 13px;
+}
+
