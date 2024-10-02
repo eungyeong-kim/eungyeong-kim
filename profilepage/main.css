@@ -92,14 +92,14 @@ body{
     -1px -1px 0px black, /* 왼쪽 위 */
     -1px 1px 0px black, /* 왼쪽 아래 */
     1px -1px 0px black; /* 오른쪽 위 */
+    margin-bottom: 220px;
+}
+.scroll{
+    display: flex;
+    justify-content: center;
     margin-bottom: 283px;
 }
-.secondWrap .scroll{
-    left: 50%;
-    transform: translateX(-50%);
-    position:fixed;
-    bottom: 5%;
-}
+
 .borderBlue{
     color:#ffff;
     text-shadow: 
@@ -139,7 +139,6 @@ body{
     position:relative;
     padding: 10px;
     box-sizing: border-box;
-    margin-bottom: 228px;
 }
 
 .secondBoxTitle{
@@ -156,19 +155,29 @@ body{
     top: 105px;    
     padding: 10px;
     box-sizing: border-box;
+    margin-bottom: 283px;
 }
 .secondPage ul:first-of-type{
     display: flex;
     justify-content: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    line-height: 1.5;
-    font-size: 13px;
+    line-height: 1.6;
+    font-size: 14px;
 }
 .thirdList{
     display: flex;
     flex-direction: column;
 }
+.thirdList li{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+.thirdList .material-symbols-outlined{
+    font-size: 15px;
+}
+
 
 .thirdPageTitle{
     display: flex;
@@ -214,7 +223,7 @@ body{
     height: 400px;
     padding: 10px;
     box-sizing: border-box;
-    margin-bottom: 207px;
+    margin-bottom: 283px;
 }
 
 .thirdBox h3{
@@ -319,4 +328,31 @@ body{
 }
 .textWrap a:hover{
     text-decoration: underline;
+}
+
+.thx{
+    font-size: 140px;
+    line-height: 0.9;
+}
+.forWatching{
+    color:#cfcfcf;
+    font-size: 96px;
+    line-height: 1.1;
+}
+.and{
+    background-color: #000;
+    color: #fff;
+    font-size: 64px;
+    width:fit-content;
+    padding: 0 2px;
+    box-sizing: border-box;
+}
+.haveAnice{
+    font-size: 128px;
+    line-height: 0.7;
+}
+.Day{
+    font-size: 207px;
+    margin-bottom: 170px;
+    line-height: 0.9;
 }
