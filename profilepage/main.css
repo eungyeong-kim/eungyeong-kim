@@ -22,6 +22,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html,body{
+    height: 100%
+}
 ol, ul {
 	list-style: none;
 }
@@ -60,6 +63,12 @@ body{
     width: 100%;
 
 }
+.section {
+    height: 100vh; /* 각 섹션이 전체 화면을 차지하도록 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 .secondWrap{
     width: 1200px;
     margin:auto;
@@ -75,8 +84,35 @@ body{
     clip-path: polygon(0 0, 0 0, 0 0);
 }
 .firstPage{
-    margin-top: 283px;
+    height: 100vh
 }
+.firstPageWrap{
+    margin-top: 283px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.secondPageWrap{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.thirdPageWrap{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.secondPage{
+    height: 100vh
+}
+.thirdPage{
+    height: 100vh
+}
+.fourthPage{
+    height: 100vh
+}
+
 .firstPage p:first-of-type{
     font-size: 150px;
     color:#0000ff
@@ -97,7 +133,6 @@ body{
 .scroll{
     display: flex;
     justify-content: center;
-    margin-bottom: 283px;
 }
 
 .borderBlue{
@@ -152,10 +187,9 @@ body{
     color:#000;
     border: 1px solid #000;
     position:relative;
-    top: 105px;    
+    top: 50px;    
     padding: 10px;
     box-sizing: border-box;
-    margin-bottom: 283px;
 }
 .secondPage ul:first-of-type{
     display: flex;
@@ -198,7 +232,7 @@ body{
     color:#cfcfcf;
 }
 
-.infinite{
+.loopBox{
     background-color: #000;
     padding: 5px;
     color:#fff;
@@ -211,6 +245,7 @@ body{
     margin-left: -50vw; 
     left: 50%;
     margin-bottom: 27px;
+   
 }
 
 .thirdBoxWrap{
@@ -223,7 +258,6 @@ body{
     height: 400px;
     padding: 10px;
     box-sizing: border-box;
-    margin-bottom: 283px;
 }
 
 .thirdBox h3{
@@ -237,8 +271,7 @@ body{
 .thirdFirst{
     border: 1px solid #0000ff;
     background-color: #fff;
-    color: #0000ff;
-    
+    color: #0000ba;
 }
 
 .thirdSecond{
@@ -304,9 +337,10 @@ body{
     font-size: 20px;
     line-height: 2;
 }
+
 .thirdFirst .textWrap a{
     text-decoration: none;
-    color:#0000ff;
+    color:#0000de;
     display: flex;
     align-items: center;  
 }
@@ -328,6 +362,14 @@ body{
 }
 .textWrap a:hover{
     text-decoration: underline;
+}
+
+
+.fourthPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;   
 }
 
 .thx{
@@ -353,6 +395,5 @@ body{
 }
 .Day{
     font-size: 207px;
-    margin-bottom: 170px;
     line-height: 0.9;
 }
