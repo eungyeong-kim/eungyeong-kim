@@ -83,7 +83,8 @@ body{
     clip-path: polygon(0 0, 0 0, 0 0);
 }
 .firstPage{
-    height: 100vh
+    height: 100vh;
+    position: relative;
 }
 .firstPageWrap{
     display:flex;
@@ -108,12 +109,12 @@ body{
     height: 100vh
 }
 .fourthPage{
-    height: 100vh
+    height: 100vh;
 }
 
 .firstPage .firstPageWrap p:first-of-type{
     font-size: 150px;
-    color:#0000ff
+    color:#0000ff;
 }
 .firstPage p:nth-of-type(2){
     font-size: 50px;
@@ -127,15 +128,16 @@ body{
     -1px 1px 0px black, /* 왼쪽 아래 */
     1px -1px 0px black; /* 오른쪽 위 */
 }
-
- .secondWrap > .firstPage > .scroll{
+.firstPage p:first-of-type{
+    font-size: 14px;
     display: flex;
     justify-content: center;
-    position: relative;
-    color:#000;
-    font-size: 14px;
+    align-items: center;
 }
-
+.firstPage .scrollWrap{
+    position: relative;
+    top: 25vh
+}
 .borderBlue{
     color:#ffff;
     text-shadow: 
@@ -408,6 +410,9 @@ body{
         width: 320px;
         display: block;
         margin: 0 auto;
+    }
+    .firstPage .scrollWrap{
+        top: 35vh
     }
     .firstPage .firstPageWrap p:first-of-type{
         font-size: 4rem;
