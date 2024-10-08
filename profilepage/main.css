@@ -250,7 +250,6 @@ body{
     margin-left: -50vw; 
     left: 50%;
     margin-bottom: 27px;
-   
 }
 
 .thirdBoxWrap{
@@ -485,5 +484,76 @@ body{
         position: relative;
         bottom: 30px
     }
-   
+
+    .thirdPageTitle h2{
+        font-size: 2rem;
+        position:relative;
+        bottom: -2vh
+    }
+    .thirdPageTitle > p:first-of-type{
+        font-size: 180%;
+        position:relative;
+        bottom: -2vh;
+    }
+
+    .loopBox{
+        bottom: 2vh;
+    }
+    .loopBox p{
+        white-space: nowrap;
+        text-overflow: clip;
+    }
+
+    .thirdBoxWrap{
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+    .thirdBox{
+        height: 14rem;
+        position: relative;
+        bottom: 3vh;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    .thirdBox h3{
+        font-size: 1.3rem;
+    }
+    .thirdFirst .textWrap>img{
+        width: 6rem;
+        height: 6rem;
+    }
+    .thirdSecond .textWrap>img{
+        width: 6rem;
+        height: 6rem;
+    }
+    .thirdThird .textWrap>img{
+        width: 6rem;
+        height: 6rem;
+    }
+    .thirdBox > .textWrap{
+        height: 11rem;
+        font-size: 1rem;
+    }
+    .fourthPage p{
+        font-size: 3rem;
+    }
+    .thx{
+        line-height: 1.1;
+    }
+    .fourthPage .forWatching{
+        font-size: 2.3rem;
+        line-height: 1.2;
+    }
+    .fourthPage .and{
+        font-size: 2.1rem;
+    }
+    .fourthPage .haveAnice{
+        font-size: 2.3rem;
+        line-height: 0.88;
+    }
+    .fourthPage .Day{
+        font-size: 4rem;
+    }
+
 }
