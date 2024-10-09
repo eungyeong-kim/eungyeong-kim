@@ -9,6 +9,9 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="./profilepage/jquery.fullpage.min.js"></script>
     <script src="./profilepage/jquery.fullpage.extensions.min.js"></script>
+    <script src="./profilepage/mainScript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
     <title>EG's Profile</title>
 </head>
 <body>
@@ -18,7 +21,7 @@
             <div class="firstPage section" id="firstSection">
                 <div class="firstPageWrap">
                     <h1 class="hide">EG's profile page</h1>
-                    <p>HELLO!</p>
+                    <p class="TitleAni">HELLO!</p>
                     <p>Welcome to my Profile Page.</p>
                     <p>-eg kim.</p>
                 </div>
@@ -170,16 +173,5 @@
         </div>
         </div>
     </div>
-    <script>
-        $(document).ready(function() {
-            $('#fullpage').fullpage({
-                //options here
-                autoScrolling:true,
-            });
-
-            // Example of how to use fullpage.js methods
-            $.fn.fullpage.setAllowScrolling(true);
-        });
-    </script>
 </body>
 </html>
