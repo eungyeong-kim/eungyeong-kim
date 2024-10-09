@@ -15,26 +15,29 @@ $(document).ready(function() {
                         opacity: [0, 1],
                         translateZ: 0,
                         easing: "easeOutExpo",
-                        duration: 600,
+                        duration: 500,
                         delay: (el, i) => 70 * (i + 1)
                     }).add({
                         targets: '.TitleAnimation',
-                        scaleX: [0, 1],
-                        opacity: [0.5, 1],
-                        easing: "easeOutExpo",
-                        duration: 700,
-                        offset: '-=875',
-                        delay: (el, i, l) => 80 * (l - i)
-                    }).add({
-                        targets: '.TitleAnimation',
                         opacity: 0,
-                        duration: 1000,
+                        duration: 700,
                         easing: "easeOutExpo",
-                        delay: 1000
+                        delay: 700
                     });
             } else {
                 console.error("Element with class 'TitleAni' not found.");
             }
+        infiniteAnimation();                    
         }
     });
 });
+
+function infiniteAnimation(){
+    anime({
+        targets: ".infinite",
+        translateX: 250,
+        duration: 1000,
+        easing: 'easeInOutQuad',
+        loop: true
+    })
+}
