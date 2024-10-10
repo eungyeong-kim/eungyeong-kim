@@ -1,0 +1,13 @@
+.scroll_wrap {
+    overflow: hidden;
+}
+
+.scroll_on {
+    transition: transform 1s, opacity 1s; /* 애니메이션 속도 */
+    transform: translateX(-500px); /* 초기 위치를 왼쪽으로 설정 */
+    opacity: 0;
+}
+.scroll_on.active {
+    transform: translateX(0); /* active 클래스가 추가되면 요소가 제자리로 이동 */
+    opacity: 1;
+}

@@ -215,7 +215,6 @@ body{
 }
 .secondPage ul:first-of-type{
     display: flex;
-    justify-content: center;
     justify-content: space-between;
     flex-wrap: wrap;
     line-height: 1.6;
@@ -263,6 +262,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 @keyframes blink{
     0%{
         opacity: 1;
