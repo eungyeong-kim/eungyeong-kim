@@ -20,24 +20,13 @@ $(document).ready(function() {
                     }).add({
                         targets: '.TitleAnimation',
                         opacity: 0,
-                        duration: 700,
+                        duration: 800,
                         easing: "easeOutExpo",
-                        delay: 700
+                        delay: 800
                     });
             } else {
                 console.error("Element with class 'TitleAni' not found.");
             }
-        infiniteAnimation();                    
         }
     });
 });
-
-function infiniteAnimation(){
-    anime({
-        targets: ".infinite",
-        translateX: 250,
-        duration: 1000,
-        easing: 'easeInOutQuad',
-        loop: true
-    })
-}

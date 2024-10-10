@@ -106,6 +106,7 @@ body{
     height: 100vh
 }
 .thirdPage{
+
     height: 100vh
 }
 .fourthPage{
@@ -238,20 +239,26 @@ body{
 }
 
 .loopBox{
-    background-color: #000;
-    padding: 5px;
-    color:#fff;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    margin-left: -50vw; 
-    left: 50%;
+    color: #000;
     margin-bottom: 27px;
 }
-
+.loopBox p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }50%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+    }
+}
+.infinite{
+    animation: blink 2s infinite;
+}
 .thirdBoxWrap{
     display: flex;
     justify-content: center;
