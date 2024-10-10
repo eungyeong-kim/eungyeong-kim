@@ -84,7 +84,10 @@ body{
 }
 .firstPage{
     height: 100vh;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .firstPageWrap{
     display:flex;
@@ -139,6 +142,19 @@ body{
     position: relative;
     top: 25vh
 }
+
+.scroll{
+    animation: upDown 0.8s infinite ease-in-out alternate;
+}
+
+@keyframes upDown{
+    from{
+        transform: translateY(0px)
+    }to{
+        transform:translateY(-10px)
+    }
+}
+
 .borderBlue{
     color:#ffff;
     text-shadow: 
