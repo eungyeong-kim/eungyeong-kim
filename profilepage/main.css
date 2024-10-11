@@ -276,15 +276,40 @@ body{
     animation: blink 2s infinite;
 }
 .thirdBoxWrap{
+    
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
 }
+
 .thirdBox{
+    position: relative;
     width: 330px;
     height: 400px;
     padding: 10px;
     box-sizing: border-box;
+}
+
+.thirdBoxWrap>li::before{
+    content: '';
+    position:absolute;
+    width: 330px;
+    height:400px;
+    background-color: rgba(0,0,0,0.4);
+    opacity: 0;
+    z-index: 100;
+}
+.thirdBoxWrap>li:hover::before{
+    content:"Go!";
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color:#fff;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .thirdBox h3{
@@ -516,6 +541,7 @@ body{
         position:relative;
         bottom: -2vh
     }
+
     .thirdPageTitle > p:first-of-type{
         font-size: 180%;
         position:relative;

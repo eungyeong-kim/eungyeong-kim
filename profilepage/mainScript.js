@@ -57,15 +57,16 @@ $(document).ready(function(){
                     const winHeight = window.innerHeight;
                     const contentHeight = rect.bottom - rect.top;
 
-                    // 요소가 화면에 노출되었을 때
                     if (rect.top <= winHeight - (contentHeight * exposurePercentage / 100) && rect.bottom >=(contentHeight * exposurePercentage / 100) ) {
-                        $el.addClass('active'); // active 클래스 추가
+                        $el.addClass('active'); 
                     } 
-                    // loop가 true이고 요소가 화면에서 벗어났을 때
+
                     if (loop && (rect.bottom <= 0 || rect.top >= window.innerHeight)) {
-                        $el.removeClass('active'); // active 클래스 제거
+                        $el.removeClass('active');
                     }
                     
                 });
             }).scroll();
+
+           
 });
