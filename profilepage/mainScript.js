@@ -49,22 +49,23 @@ $(document).ready(function(){
             const $counters = $('.scroll_on');
             const exposurePercentage = 100;
             const loop = true;
-            
+
             $(window).on('scroll', function() {
                 $counters.each(function() {
                     const $el = $(this);
                     const rect = $el[0].getBoundingClientRect();
                     const winHeight = window.innerHeight;
                     const contentHeight = rect.bottom - rect.top;
-            
+
                     // 요소가 화면에 노출되었을 때
-                    if (rect.top <= winHeight - (contentHeight * exposurePercentage / 100)) {
+                    if (rect.top <= winHeight - (contentHeight * exposurePercentage / 100) && rect.bottom >=(contentHeight * exposurePercentage / 100) ) {
                         $el.addClass('active'); // active 클래스 추가
                     } 
                     // loop가 true이고 요소가 화면에서 벗어났을 때
                     if (loop && (rect.bottom <= 0 || rect.top >= window.innerHeight)) {
                         $el.removeClass('active'); // active 클래스 제거
                     }
+                    
                 });
-            });
-})
+            }).scroll();
+});

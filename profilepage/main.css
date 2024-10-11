@@ -507,7 +507,7 @@ body{
     }
 
     .secondUlWrap{
-        position: relative;
+        display: block;
         bottom: 30px
     }
 
