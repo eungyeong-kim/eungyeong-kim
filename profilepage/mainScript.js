@@ -67,18 +67,7 @@ $(document).ready(function(){
                     
                 });
             }).scroll();
-            
-            // var popupData = [
-            //     {id: 'popUp1', content: "hello"},
-            //     {id: 'popUp2', content: "hello"},
-            //     {id: 'popUp3', content: "hello"},
-            // ]
-           
-            // popupData.forEach(
-            //     function(){
-            //         $('')
-            //     }
-            // )    
+          
 
             var thirdCont = [
                 {id: "thirdBox1", title:"Team Project", image:"./profilepage/images/mail.png", alt:"매일유업", boxtitle:"매일유업 RENEWAL", className:"thirdFirst", colorName:"gray", colorName2:"colorBlue", firstH3:"Team" },
@@ -89,7 +78,7 @@ $(document).ready(function(){
                 $('#thirdList').append(`
                     <li id="${data.id}">
                         <div class="thirdBox ${data.className}">
-                            <h3><span class="${data.colorName}">${data.firstH3}</span> <span class="${data.colorName2}">Project</span>
+                            <h3><span class="${data.colorName}">${data.firstH3}</span> <span class="${data.colorName2}">Project.</span>
                             <div class="fontNeo textWrap">
                                 <img src="${data.image}" alt="${data.alt}" />
                                 <p>${data.boxtitle}</p>
