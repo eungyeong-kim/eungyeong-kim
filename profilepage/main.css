@@ -501,6 +501,7 @@ body{
     top:0;
     left:0;
     z-index: 900;
+    display: none;
 }
 .popupWidth{
     width: 1200px;
