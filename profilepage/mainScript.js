@@ -74,6 +74,7 @@ $(document).ready(function(){
                 {id: "thirdBox2", title:"Team project", image:"./profilepage/images/logo-light.png", alt:"세탁왕", boxtitle:"세탁왕 RENEWAL", className:"thirdSecond", colorName:"colorBlack", firstH3:"Team"},
                 {id: "thirdBox3", title:"Team project", image:"./profilepage/images/heroesshoptlogo.png", alt:"히어로즈샵", boxtitle:"Heroes Shop", className:"thirdThird", colorName:"colorBlue", firstH3:"Personer"},
             ]
+
             thirdCont.forEach(function(data){
                 $('#thirdList').append(`
                     <li id="${data.id}">
@@ -137,6 +138,7 @@ $(document).ready(function(){
                     </div>  
                     `);}
                     else if(data.type === 'personal'){
+                        console.log('특수 모달 생성 중:', data.id);
                     $('body').append(`
                         <div class="popupWidth" id="${data.id}">
                             <div class="fontNeo popupContent">
@@ -169,14 +171,21 @@ $(document).ready(function(){
                     `);}
                     })    
 
-            //click effect
+            //open effect
             $('#thirdList').on('click','li',function(){
                 var select = $(this).attr('id');
-                var connect = select.replace('thirdbox', 'popup');
-                $(`#${connect.id}`).fadeIn();
-                $('.popupBackground').fadeIn();
+                var connect = select.replace('thirdBox', 'popup');
+                $(`#${connect}`).fadeIn();
+                $('.popupBackground').fadeIn(); // 배경 열기
+                console.log(connect)
             });
 
-            
 
+            //close effect
+            $('body').on('click','.modalClose', '.popupBackground', function(){
+                $('.popupBackground').fadeOut()
+            })
+
+            
+            
 });
