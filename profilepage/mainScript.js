@@ -95,52 +95,14 @@ $(document).ready(function(){
             var popupCont = [
                 {id: "popup1", popH3:"매일유업 리뉴얼 프로젝트", popImage:"./profilepage/images/mail.png", popAlt:"매일유업", projectTypeTitle:"About Our Project", popDate:"2024. 06.12 Wed - 2024. 07. 05 Fri", Tools:"Html5, Css3, JavaScript, JQuery", layoutType:"fixed", con1:"1. 메인 페이지 이미지 및 레이아웃 디자인", con2:"2. 메인 페이지 5-6섹션 및 footer 제작", con3:"3. 기업소개, 브랜드, 로그인 페이지 디자인 및 제작", con4:"4. 프로젝트 진행 총괄", pjLink:"#none", ppt:"#none", projectType:"team" },
                 {id: "popup2", popH3:"세탁왕 리뉴얼 프로젝트", popImage:"./profilepage/images/logoDark.png", popAlt:"세탁왕", projectTypeTitle:"About Our Project", popDate:"2024. 07.31 Wed - 2024. 08. 14 Wed", Tools:"Vue.js, Vuetify, Firebase", layoutType:"Responsive", con1:"1. 요금표, 공지사항, 자주묻는질문, 사이드바 디자인", con2:"2. 이용내역, 요금표, 공지사항, 자주묻는질문 제작", con3:"3. 프로젝트 진행 총괄", pjLink:"#none", ppt:"#none", projectType:"team" },
-                {id: "popup3", popH3:"히어로즈샵 프로젝트", popImagae:"./profilepage/images/heroesShopGray.png", popAlt:"히어로즈샵", projectTypeTitle:"About My Project", popDate:"2024. 09.04 Wed - 2024. 09. 24 Tue", Tools:"React, React BootStrap, FireBase", layoutType:"Responsive", pjLink:"#none", ppt:"#none", projectType:"personal"}
+                {id: "popup3", popH3:"히어로즈샵 프로젝트", popImage:"./profilepage/images/heroesShopGray.png", popAlt:"히어로즈샵", projectTypeTitle:"About My Project", popDate:"2024. 09.04 Wed - 2024. 09. 24 Tue", Tools:"React, React BootStrap, FireBase", layoutType:"Responsive", pjLink:"#none", ppt:"#none", projectType:"personal"}
             ]
 
             
             popupCont.forEach(function(popupContData, index){
-                if(popupContData.type==='team'){
+                if(popupContData.projectType==='team'){
                 $('body').append(`
-                    <div class="popupWidth" id="${popupContData.id}" data-index="${index}">
-                        <div class="fontNeo popupContent">
-                            <button class="fontNeo modalClose" type="button">X</button>
-                                <div class="popupWrap">
-                                    <h3>${popupContData.popH3}</h3>
-                                    <img src="${popupContData.popImage}" alt="${popupContData.popAlt}" />
-                                    <p><span aria-hidden="true">*************</span>${popupContData.projectTypeTitle}<span aria-hidden="true">*************</span></p>
-                                    <ul>
-                                        <li>Duration: ${popupContData.popDate}</li>
-                                        <li>Completion Level: ★★★★☆</li>
-                                        <li>Tools: ${popupContData.Tools}</li>
-                                        <li>Layout Type: ${popupContData.layoutType}</li>
-                                    </ul>
-                                    <p class="popupLine" aria-hidden="true">****************************************</p>
-                                    <p>CONTRIBUTION</p>
-                                    <ul>
-                                        <li>${popupContData.con1}</li>
-                                        <li>${popupContData.con2}</li>
-                                        <li>${popupContData.con3}</li>
-                                        <li>${popupContData.con4}</li>
-                                    </ul>
-                                    <p class="popupLine" aria-hidden="true">****************************************</p>
-                                    <p>Link To</p>
-                                    <ul>
-                                        <li>
-                                        <a href="${popupContData.pjLink}">project page<span class="material-symbols-outlined">attach_file</span></a>
-                                        </li>
-                                        <li>
-                                        <a href="${popupContData.ppt}">ppt<span class="material-symbols-outlined">attach_file</span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                        </div>        
-                    </div>  
-                    `);}
-                    else if(popupContData.type === 'personal'){
-                        console.log('특수 모달 생성 중:', popupContData.id);
-                    $('body').append(`
-                        <div class="popupWidth" id="${popupContData.id}" data-index="${index}">
+                    <div class="popupWidth" id="${popupContData.id}" data-index="${index}" style="display:none">
                             <div class="fontNeo popupContent">
                                 <button class="fontNeo modalClose" type="button">X</button>
                                     <div class="popupWrap">
@@ -153,8 +115,45 @@ $(document).ready(function(){
                                             <li>Tools: ${popupContData.Tools}</li>
                                             <li>Layout Type: ${popupContData.layoutType}</li>
                                         </ul>
-                                        <p class="popupLine">****************************************</p>
-                                        <p>"This project was<br/>completely created by EG!"</p>
+                                        <p class="popupLine" aria-hidden="true">****************************************</p>
+                                        <p>CONTRIBUTION</p>
+                                        <ul>
+                                            <li>${popupContData.con1}</li>
+                                            <li>${popupContData.con2}</li>
+                                            <li>${popupContData.con3}</li>
+                                            <li>${popupContData.con4}</li>
+                                        </ul>
+                                        <p class="popupLine" aria-hidden="true">****************************************</p>
+                                        <p>Link To</p>
+                                        <ul>
+                                            <li>
+                                            <a href="${popupContData.pjLink}">project page<span class="material-symbols-outlined">attach_file</span></a>
+                                            </li>
+                                            <li>
+                                            <a href="${popupContData.ppt}">ppt<span class="material-symbols-outlined">attach_file</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                            </div>
+                    </div>  
+                    `);}
+                    else if(popupContData.projectType === 'personal'){
+                    $('body').append(`
+                        <div class="popupWidth" id="${popupContData.id}" data-index="${index}">
+                            <div class="fontNeo popupContent" style="display:none">
+                                <button class="fontNeo modalClose" type="button">X</button>
+                                    <div class="popupWrap">
+                                        <h3>${popupContData.popH3}</h3>
+                                        <img src="${popupContData.popImage}" alt="${popupContData.popAlt}" />
+                                        <p><span aria-hidden="true">*************</span>${popupContData.projectTypeTitle}<span aria-hidden="true">*************</span></p>
+                                        <ul>
+                                            <li>Duration: ${popupContData.popDate}</li>
+                                            <li>Completion Level: ★★★★☆</li>
+                                            <li>Tools: ${popupContData.Tools}</li>
+                                            <li>Layout Type: ${popupContData.layoutType}</li>
+                                        </ul>
+                                        <p class="popupLine firstmg">****************************************</p>
+                                        <p class="secondmg">"This project was<br/>completely created by EG!"</p>
                                         <p class="popupLine">****************************************</p>
                                         <p>Link To</p>
                                         <ul>
@@ -166,39 +165,44 @@ $(document).ready(function(){
                                             </li>
                                         </ul>
                                     </div>
-                            </div>        
-                        </div>  
+                            </div>
+                        </div>      
                     `);}
                     })    
-                /*
+            
             //open effect
             $('#thirdList').on('click','li',function(){
                 var select = $(this).data('index');
                 console.log("클릭한 박스의 인덱스 : ", select);
-                console.log("모달 데이터 배열 : ", popupCont);
                 
                 if(select < popupCont.length){
                     var popupId = popupCont[select].id;
                     console.log(popupId)
                     var connect = $(`#${popupId}`);
+                    console.log("connect에 출력된 값 입니다. : ",connect)
+                     // 모달의 display 상태를 명확하게 확인
+                if (connect.css('display') === 'none') {
+                    console.log('모달이 숨겨진 상태입니다.');
+                    connect.fadeIn();  // 모달을 숨긴 상태에서만 fadeIn 실행
+                } else {
+                    console.log('모달이 이미 보이는 상태입니다.');
+                }
 
-                    if(connect.length >= 0){
-                        connect.fadeIn();
-                        $('.popupBackground').fadeIn();
-                    }else{
-                        console.log('모달이 존재하지 않습니다.')
-                    }
-                }else{
-                        console.log('박스 인덱스가 배열 범위를 벗어났습니다.')
-                    }
+                // 배경도 함께 처리
+                if ($('.popupBackground').css('display') === 'none') {
+                    $('.popupBackground').fadeIn();  // 배경도 보이지 않을 때만 fadeIn 실행
+                }
+            } else {
+                console.log('박스 인덱스가 배열 범위를 벗어났습니다.');
+            }
 
             });
-
+            
 
             //close effect
             $('body').on('click','.modalClose', '.popupBackground', function(){
                 $('.popupBackground').fadeOut()
-            })*/
+            })
 
             
             

@@ -510,15 +510,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    position:relative;
 }
-.popupWidth .popupContent{
+.popupContent{
     width: 500px;
     height: fit-content;
-    top: 50%;
+    bottom: -150%;
     margin: 0 auto;
     background-color: #fff;
     position: absolute;
-    z-index: 1000;
+    z-index: 1001;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -556,6 +557,14 @@ body{
 }
 .popupLine{
     margin-bottom: 5px;
+}
+.firstmg{
+    margin-bottom: 30px;
+}
+.secondmg{
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 18px;
 }
 .popupContent ul{
     display: flex;
