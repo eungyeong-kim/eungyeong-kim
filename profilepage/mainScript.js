@@ -75,14 +75,14 @@ $(document).ready(function(){
                 {id: "thirdBox3", title:"Team project", image:"./profilepage/images/heroesshoptlogo.png", alt:"히어로즈샵", boxtitle:"Heroes Shop", className:"thirdThird", colorName:"colorBlue", firstH3:"Personer"},
             ]
 
-            thirdCont.forEach(function(data){
+            thirdCont.forEach(function(thirdContData, index){
                 $('#thirdList').append(`
-                    <li id="${data.id}">
-                        <div class="thirdBox ${data.className}">
-                            <h3><span class="${data.colorName}">${data.firstH3}</span> <span class="${data.colorName2}">Project.</span>
+                    <li id="${thirdContData.id}" data-index="${index}">
+                        <div class="thirdBox ${thirdContData.className}">
+                            <h3><span class="${thirdContData.colorName}">${thirdContData.firstH3}</span> <span class="${thirdContData.colorName2}">Project.</span>
                             <div class="fontNeo textWrap">
-                                <img src="${data.image}" alt="${data.alt}" />
-                                <p>${data.boxtitle}</p>
+                                <img src="${thirdContData.image}" alt="${thirdContData.alt}" />
+                                <p>${thirdContData.boxtitle}</p>
                                 <a href="#none">project page <span class="material-symbols-outlined">attach_file</span></a>
                                 <a href="#none">ppt <span class="material-symbols-outlined">attach_file</span></a>
                             </div>
@@ -99,59 +99,59 @@ $(document).ready(function(){
             ]
 
             
-            popupCont.forEach(function(data){
-                if(data.type==='team'){
+            popupCont.forEach(function(popupContData, index){
+                if(popupContData.type==='team'){
                 $('body').append(`
-                    <div class="popupWidth" id="${data.id}">
+                    <div class="popupWidth" id="${popupContData.id}" data-index="${index}">
                         <div class="fontNeo popupContent">
                             <button class="fontNeo modalClose" type="button">X</button>
                                 <div class="popupWrap">
-                                    <h3>${data.popH3}</h3>
-                                    <img src="${data.popImage}" alt="${data.popAlt}" />
-                                    <p><span aria-hidden="true">*************</span>${data.projectTypeTitle}<span aria-hidden="true">*************</span></p>
+                                    <h3>${popupContData.popH3}</h3>
+                                    <img src="${popupContData.popImage}" alt="${popupContData.popAlt}" />
+                                    <p><span aria-hidden="true">*************</span>${popupContData.projectTypeTitle}<span aria-hidden="true">*************</span></p>
                                     <ul>
-                                        <li>Duration: ${data.popDate}</li>
+                                        <li>Duration: ${popupContData.popDate}</li>
                                         <li>Completion Level: ★★★★☆</li>
-                                        <li>Tools: ${data.Tools}</li>
-                                        <li>Layout Type: ${data.layoutType}</li>
+                                        <li>Tools: ${popupContData.Tools}</li>
+                                        <li>Layout Type: ${popupContData.layoutType}</li>
                                     </ul>
                                     <p class="popupLine" aria-hidden="true">****************************************</p>
                                     <p>CONTRIBUTION</p>
                                     <ul>
-                                        <li>${data.con1}</li>
-                                        <li>${data.con2}</li>
-                                        <li>${data.con3}</li>
-                                        <li>${data.con4}</li>
+                                        <li>${popupContData.con1}</li>
+                                        <li>${popupContData.con2}</li>
+                                        <li>${popupContData.con3}</li>
+                                        <li>${popupContData.con4}</li>
                                     </ul>
                                     <p class="popupLine" aria-hidden="true">****************************************</p>
                                     <p>Link To</p>
                                     <ul>
                                         <li>
-                                        <a href="${data.pjLink}">project page<span class="material-symbols-outlined">attach_file</span></a>
+                                        <a href="${popupContData.pjLink}">project page<span class="material-symbols-outlined">attach_file</span></a>
                                         </li>
                                         <li>
-                                        <a href="${data.ppt}">ppt<span class="material-symbols-outlined">attach_file</span></a>
+                                        <a href="${popupContData.ppt}">ppt<span class="material-symbols-outlined">attach_file</span></a>
                                         </li>
                                     </ul>
                                 </div>
                         </div>        
                     </div>  
                     `);}
-                    else if(data.type === 'personal'){
-                        console.log('특수 모달 생성 중:', data.id);
+                    else if(popupContData.type === 'personal'){
+                        console.log('특수 모달 생성 중:', popupContData.id);
                     $('body').append(`
-                        <div class="popupWidth" id="${data.id}">
+                        <div class="popupWidth" id="${popupContData.id}" data-index="${index}">
                             <div class="fontNeo popupContent">
                                 <button class="fontNeo modalClose" type="button">X</button>
                                     <div class="popupWrap">
-                                        <h3>${data.popH3}</h3>
-                                        <img src="${data.popImage}" alt="${data.popAlt}" />
-                                        <p><span aria-hidden="true">*************</span>${data.projectTypeTitle}<span aria-hidden="true">*************</span></p>
+                                        <h3>${popupContData.popH3}</h3>
+                                        <img src="${popupContData.popImage}" alt="${popupContData.popAlt}" />
+                                        <p><span aria-hidden="true">*************</span>${popupContData.projectTypeTitle}<span aria-hidden="true">*************</span></p>
                                         <ul>
-                                            <li>Duration: ${data.popDate}</li>
+                                            <li>Duration: ${popupContData.popDate}</li>
                                             <li>Completion Level: ★★★★☆</li>
-                                            <li>Tools: ${data.Tools}</li>
-                                            <li>Layout Type: ${data.layoutType}</li>
+                                            <li>Tools: ${popupContData.Tools}</li>
+                                            <li>Layout Type: ${popupContData.layoutType}</li>
                                         </ul>
                                         <p class="popupLine">****************************************</p>
                                         <p>"This project was<br/>completely created by EG!"</p>
@@ -159,10 +159,10 @@ $(document).ready(function(){
                                         <p>Link To</p>
                                         <ul>
                                             <li>
-                                            <a href="${data.pjLink}">project page<span class="material-symbols-outlined">attach_file</span></a>
+                                            <a href="${popupContData.pjLink}">project page<span class="material-symbols-outlined">attach_file</span></a>
                                             </li>
                                             <li>
-                                            <a href="${data.ppt}">ppt<span class="material-symbols-outlined">attach_file</span></a>
+                                            <a href="${popupContData.ppt}">ppt<span class="material-symbols-outlined">attach_file</span></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -170,21 +170,35 @@ $(document).ready(function(){
                         </div>  
                     `);}
                     })    
-
+                /*
             //open effect
             $('#thirdList').on('click','li',function(){
-                var select = $(this).attr('id');
-                var connect = select.replace('thirdBox', 'popup');
-                $(`#${connect}`).fadeIn();
-                $('.popupBackground').fadeIn(); // 배경 열기
-                console.log(connect)
+                var select = $(this).data('index');
+                console.log("클릭한 박스의 인덱스 : ", select);
+                console.log("모달 데이터 배열 : ", popupCont);
+                
+                if(select < popupCont.length){
+                    var popupId = popupCont[select].id;
+                    console.log(popupId)
+                    var connect = $(`#${popupId}`);
+
+                    if(connect.length >= 0){
+                        connect.fadeIn();
+                        $('.popupBackground').fadeIn();
+                    }else{
+                        console.log('모달이 존재하지 않습니다.')
+                    }
+                }else{
+                        console.log('박스 인덱스가 배열 범위를 벗어났습니다.')
+                    }
+
             });
 
 
             //close effect
             $('body').on('click','.modalClose', '.popupBackground', function(){
                 $('.popupBackground').fadeOut()
-            })
+            })*/
 
             
             
