@@ -97,8 +97,6 @@ $(document).ready(function(){
                 {id: "popup2", popH3:"세탁왕 리뉴얼 프로젝트", popImage:"./profilepage/images/logoDark.png", popAlt:"세탁왕", projectTypeTitle:"About Our Project", popDate:"2024. 07.31 Wed - 2024. 08. 14 Wed", Tools:"Vue.js, Vuetify, Firebase", layoutType:"Responsive", con1:"1. 요금표, 공지사항, 자주묻는질문, 사이드바 디자인", con2:"2. 이용내역, 요금표, 공지사항, 자주묻는질문 제작", con3:"3. 프로젝트 진행 총괄", pjLink:"#none", ppt:"#none", projectType:"team" },
                 {id: "popup3", popH3:"히어로즈샵 프로젝트", popImage:"./profilepage/images/heroesShopGray.png", popAlt:"히어로즈샵", projectTypeTitle:"About My Project", popDate:"2024. 09.04 Wed - 2024. 09. 24 Tue", Tools:"React, React BootStrap, FireBase", layoutType:"Responsive", pjLink:"#none", ppt:"#none", projectType:"personal"}
             ]
-
-            
             popupCont.forEach(function(popupContData, index){
                 if(popupContData.projectType==='team'){
                 $('body').append(`
@@ -139,8 +137,8 @@ $(document).ready(function(){
                     `);}
                     else if(popupContData.projectType === 'personal'){
                     $('body').append(`
-                        <div class="popupWidth" id="${popupContData.id}" data-index="${index}">
-                            <div class="fontNeo popupContent" style="display:none">
+                        <div class="popupWidth" id="${popupContData.id}" data-index="${index}" style="display:none">
+                            <div class="fontNeo popupContent" >
                                 <button class="fontNeo modalClose" type="button">X</button>
                                     <div class="popupWrap">
                                         <h3>${popupContData.popH3}</h3>
@@ -170,39 +168,32 @@ $(document).ready(function(){
                     `);}
                     })    
             
-            //open effect
-            $('#thirdList').on('click','li',function(){
-                var select = $(this).data('index');
-                console.log("클릭한 박스의 인덱스 : ", select);
-                
-                if(select < popupCont.length){
-                    var popupId = popupCont[select].id;
-                    console.log(popupId)
-                    var connect = $(`#${popupId}`);
-                    console.log("connect에 출력된 값 입니다. : ",connect)
-                     // 모달의 display 상태를 명확하게 확인
-                if (connect.css('display') === 'none') {
-                    console.log('모달이 숨겨진 상태입니다.');
-                    connect.fadeIn();  // 모달을 숨긴 상태에서만 fadeIn 실행
-                } else {
-                    console.log('모달이 이미 보이는 상태입니다.');
-                }
-
-                // 배경도 함께 처리
-                if ($('.popupBackground').css('display') === 'none') {
-                    $('.popupBackground').fadeIn();  // 배경도 보이지 않을 때만 fadeIn 실행
-                }
-            } else {
-                console.log('박스 인덱스가 배열 범위를 벗어났습니다.');
-            }
-
-            });
             
+            var connect;
 
-            //close effect
-            $('body').on('click','.modalClose', '.popupBackground', function(){
-                $('.popupBackground').fadeOut()
-            })
+               // 모달 열기
+            $('#thirdList').on('click', 'li', function() {
+                var select = $(this).data('index');
+                if (select < popupCont.length) {
+                    var popupId = popupCont[select].id;
+                    connect = $(`#${popupId}`);  // connect에 현재 열린 모달을 저장
+                    console.log("모달 열기 - connect 값: ", connect);  // 모달이 열릴 때 connect 값 확인
+                    
+                    connect.fadeIn();  // 모달 열기
+                    $('.popupBackground').fadeIn();  // 배경 열기
+                }
+            });
+
+            // 모달 닫기
+            $('body').on('click', '.modalClose, .popupBackground', function() {
+                console.log("모달 닫기 - connect 값: ", connect);  // 모달 닫기 전 connect 값 확인
+
+                if (connect) {
+                    connect.fadeOut();  // 모달 닫기
+                    $('.popupBackground').fadeOut();  // 배경 닫기
+                    connect = null;  // 모달을 닫은 후 connect 값을 초기화
+                }
+            });
 
             
             
