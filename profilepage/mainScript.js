@@ -133,7 +133,7 @@ $(document).ready(function(){
             ]
 
             popupCont.forEach(function(popupContData, index){
-                
+
                 var contData = '';
                 if(Array.isArray(popupContData.contribution)){
                 popupContData.contribution.forEach(function(item){
@@ -217,21 +217,19 @@ $(document).ready(function(){
                 var select = $(this).data('index');
                 if (select < popupCont.length) {
                     var popupId = popupCont[select].id;
-                    connect = $(`#${popupId}`);  // connect에 현재 열린 모달을 저장
-                    console.log("모달 열기 - connect 값: ", connect);  // 모달이 열릴 때 connect 값 확인
+                    connect = $(`#${popupId}`);  
                     
-                    connect.fadeIn();  // 모달 열기
-                    $('.popupBackground').fadeIn();  // 배경 열기
+                    connect.fadeIn();  
+                    $('.popupBackground').fadeIn(); 
                 }
             });
 
             // 모달 닫기
             $('body').on('click', '.modalClose, .popupBackground', function() {
-                console.log("모달 닫기 - connect 값: ", connect);  // 모달 닫기 전 connect 값 확인
 
                 if (connect) {
-                    connect.fadeOut();  // 모달 닫기
-                    $('.popupBackground').fadeOut();  // 배경 닫기
+                    connect.fadeOut(); 
+                    $('.popupBackground').fadeOut();
                     connect = null;  // 모달을 닫은 후 connect 값을 초기화
                 }
             });

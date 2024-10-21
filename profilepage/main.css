@@ -105,13 +105,14 @@ body{
     display:flex;
     justify-content: center;
     flex-direction: column;
+
 }
 .secondPage{
     height: 100vh
 }
 .thirdPage{
-
-    height: 100vh
+    height: 100vh;
+    position:relative
 }
 .fourthPage{
     height: 100vh;
@@ -235,20 +236,17 @@ body{
 }
 
 .thirdPageWrap .thirdPageTitle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
+    display: block;
+    position:relative;
+    height: 270px;
 }
-.thirdPageTitle{
-    position: relative;
-    margin-bottom: 60px;
-}
+
 .thirdPageTitle h2{
     font-size: 128px;
     position:absolute;
-    bottom: 30px
+    bottom: 130px;
 }
+
 .thirdPageTitle h2:first-child{
     color:#0000ff;
 
@@ -290,7 +288,7 @@ body{
 
 .thirdPageTitle > p:first-of-type{
     font-size: 100px ;
-    line-height: 0.3;
+    
 }
 .gray{
     color:#cfcfcf;
@@ -320,7 +318,6 @@ body{
 }
 .thirdBoxWrap{
     display: flex;
-    justify-content: center;
     justify-content: space-evenly;
 }
 
@@ -515,7 +512,7 @@ body{
 .popupContent{
     width: 500px;
     height: fit-content;
-    bottom: -150%;
+    bottom: 110vh;
     margin: 0 auto;
     background-color: #fff;
     position: absolute;
