@@ -493,15 +493,16 @@ body{
     font-size: 4rem;
     width:fit-content;
     padding: 0 2px;
+    line-height: 1.2;
     box-sizing: border-box;
 }
 .haveAnice{
     font-size: 8rem;
-    line-height: 0.7;
+    line-height:0.8;
 }
 .Day{
     font-size: 12.9375rem;
-    line-height: 0.9;
+    line-height: 0.9
 }
 
 .popupBackground{
