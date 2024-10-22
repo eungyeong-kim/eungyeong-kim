@@ -178,7 +178,7 @@ $(document).ready(function(){
                     `);}
                     else if(popupContData.projectType === 'personal'){
                     $('body').append(`
-                        <div class="popupWidth" id="${popupContData.id}" data-index="${index}" style="display:none">
+                        <div class="popupWidth thirdPopupStyle" id="${popupContData.id}" data-index="${index}" style="display:none">
                             <div class="fontNeo popupContent" >
                                 <button class="fontNeo modalClose" type="button">X</button>
                                     <div class="popupWrap">
@@ -191,11 +191,11 @@ $(document).ready(function(){
                                             <li>Tools: ${popupContData.Tools}</li>
                                             <li>Layout Type: ${popupContData.layoutType}</li>
                                         </ul>
-                                        <p class="popupLine firstmg">****************************************</p>
+                                        <p class="popupLine firstmg" aria-hidden="true">****************************************</p>
                                         <p class="secondmg">"This project was<br/>completely created by EG!"</p>
-                                        <p class="popupLine">****************************************</p>
+                                        <p class="popupLine" aria-hidden="true">****************************************</p>
                                         <p>Link To</p>
-                                        <ul>
+                                        <ul class="personalUl">
                                             <li>
                                             <a href="${popupContData.pjLink}">project page<span class="material-symbols-outlined">attach_file</span></a>
                                             </li>
