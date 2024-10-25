@@ -71,7 +71,7 @@ body{
   }
 .secondWrap{
     width: 1200px;
-    margin:auto;
+    margin: 0 auto;
     display: block;
     justify-content: center;
 }
@@ -644,11 +644,11 @@ body{
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .secondWrap{
         width: 100%;
-        min-height: 100vh;
         padding: 0 16px;
+        min-height: 100vh;
         box-sizing: border-box;
     }
     .firstPage .firstPageWrap p:first-of-type{
@@ -656,6 +656,12 @@ body{
     }
     .firstPage .firstPageWrap p:nth-of-type(2){
         font-size: 2rem;
+    }
+    .firstPage .firstPageWrap p:nth-of-type(3){
+        font-size: 1.5rem;
+    }
+    .firstPage .scrollWrap{
+        top: 30vh
     }
 
 }
