@@ -234,6 +234,16 @@ $(document).ready(function(){
                 }
             });
 
-            
+            $('#introductionList li').click(
+                function(){
+                    $('.popupBackground').fadeIn();
+                    $('.blueBox').eq(0).fadeIn();
+                    
+                    
+            })
+            $('body').on('click', '.popupBackground',function(){
+                $('.popupBackground').fadeOut();
+                $('.blueBox').eq(0).fadeOut();
+            })
             
 });
