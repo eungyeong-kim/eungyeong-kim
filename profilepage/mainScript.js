@@ -234,16 +234,13 @@ $(document).ready(function(){
                 }
             });
 
-            $('#introductionList li').click(
-                function(){
-                    $('.popupBackground').fadeIn();
-                    $('.blueBox').eq(0).fadeIn();
-                    
-                    
+            $('#introductionList').each(function(index){
+                $(this).click(function(){
+                    $('body').addClass('dim');
+                
+                $('.secondUlWrap li').eq(index).css({"display":"block","z-index":"2000"})
             })
-            $('body').on('click', '.popupBackground',function(){
-                $('.popupBackground').fadeOut();
-                $('.blueBox').eq(0).fadeOut();
             })
+
             
 });
