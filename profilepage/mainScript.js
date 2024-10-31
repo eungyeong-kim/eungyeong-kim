@@ -67,7 +67,8 @@ $(document).ready(function(){
                     
                 });
             }).scroll();
-          
+        
+
             //thirdpage content
             var thirdCont = [
                 {id: "thirdBox1", title:"Team Project", image:"./profilepage/images/mail.png", alt:"매일유업", boxtitle:"매일유업 RENEWAL", className:"thirdFirst", colorName:"gray", colorName2:"colorBlue", firstH3:"Team" },
@@ -234,13 +235,7 @@ $(document).ready(function(){
                 }
             });
 
-            $('#introductionList').each(function(index){
-                $(this).click(function(){
-                    $('body').addClass('dim');
-                
-                $('.secondUlWrap li').eq(index).css({"display":"block","z-index":"2000"})
-            })
-            })
+
 
             
 });
