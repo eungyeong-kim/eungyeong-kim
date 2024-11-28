@@ -116,7 +116,7 @@ $(document).ready(function(){
                 Tools:"Vue.js, Vuetify, Firebase", 
                 layoutType:"Responsive",
                 contribution:["1. 요금표, 공지사항, 자주묻는질문, 사이드바 디자인", "2. 이용내역, 요금표, 공지사항, 자주묻는질문 제작", "3. 프로젝트 진행 총괄"],
-                pjLink:"#none", 
+                pjLink:"https://laundryking-5a8d5.web.app/", 
                 ppt:"#none", 
                 projectType:"team" },
                 
