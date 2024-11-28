@@ -128,7 +128,7 @@ $(document).ready(function(){
                 popDate:"2024. 09.04 Wed - 2024. 09. 24 Tue", 
                 Tools:"React, React BootStrap, FireBase", 
                 layoutType:"Responsive", 
-                pjLink:"#none", 
+                pjLink:"https://heroes-shop.web.app/", 
                 ppt:"#none", 
                 projectType:"personal"}
             ]
