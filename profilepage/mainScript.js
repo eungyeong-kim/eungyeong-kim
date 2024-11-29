@@ -103,7 +103,7 @@ $(document).ready(function(){
                 Tools:"Html5, Css3, JavaScript, JQuery",
                 layoutType:"fixed",
                 contribution:["1. 메인 페이지 이미지 및 레이아웃 디자인", "2. 메인 페이지 5-6섹션 및 footer 제작", "3. 기업소개, 브랜드, 로그인 페이지 디자인 및 제작", "4. 프로젝트 진행 총괄"],
-                pjLink:"#none", 
+                pjLink:"https://egej-k.github.io/Maeil/", 
                 ppt:"#none", 
                 projectType:"team" },
                 
