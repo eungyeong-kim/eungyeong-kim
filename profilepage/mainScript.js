@@ -104,7 +104,7 @@ $(document).ready(function(){
                 layoutType:"fixed",
                 contribution:["1. 메인 페이지 이미지 및 레이아웃 디자인", "2. 메인 페이지 5-6섹션 및 footer 제작", "3. 기업소개, 브랜드, 로그인 페이지 디자인 및 제작", "4. 프로젝트 진행 총괄"],
                 pjLink:"https://egej-k.github.io/Maeil/", 
-                ppt:"#none", 
+                ppt:"https://drive.google.com/file/d/1qY3e3ABGZ5HKolUovjLdPVLJ70UKpC75/view?usp=sharing", 
                 projectType:"team" },
                 
                 {id: "popup2", 
@@ -117,7 +117,7 @@ $(document).ready(function(){
                 layoutType:"Responsive",
                 contribution:["1. 요금표, 공지사항, 자주묻는질문, 사이드바 디자인", "2. 이용내역, 요금표, 공지사항, 자주묻는질문 제작", "3. 프로젝트 진행 총괄"],
                 pjLink:"https://laundryking-5a8d5.web.app/", 
-                ppt:"#none", 
+                ppt:"https://drive.google.com/file/d/1u4ZXWSqcmgVrMGves7VWAxWlQBy9bExG/view?usp=drive_link", 
                 projectType:"team" },
                 
                 {id: "popup3", 
@@ -129,7 +129,7 @@ $(document).ready(function(){
                 Tools:"React, React BootStrap, FireBase", 
                 layoutType:"Responsive", 
                 pjLink:"https://heroes-shop.web.app/", 
-                ppt:"#none", 
+                ppt:"https://drive.google.com/file/d/1AAQsksyZjnZIrYNTnKxH2mBuRSTQSZ1u/view?usp=sharing", 
                 projectType:"personal"}
             ]
 
